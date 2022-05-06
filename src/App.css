@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+html {
+    font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a,
+a:hover {
+    color: #000;
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ol,
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+address,
+caption,
+em {
+    font-weight: normal;
+    font-style: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+fieldset,
+img,
+input {
+    border: 0 none;
+    outline: none;
+}
+
+input,
+select,
+textarea {
+    vertical-align: middle;
+}
+
+body {
+    background: #000;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.gnb {
+    position: absolute;
+    right: 20px;
+    bottom: 50%;
+    transform: translateY(50%);
+
+}
+
+.gnb li {
+    padding: 15px 0;
+    width: 50px;
+    height: 50px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 30px 0;
+    font-size: 0;
+    text-indent: -70px;
+    cursor: pointer;
+    transition: background 0.5s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gnb li:hover {
+    font-size: 1.5rem;
+}
+
+@media(max-width: 1000px) {
+    .gnb {
+        left: 0;
+        bottom: 0;
+        transform: translateY(0);
+        display: flex;
+        justify-content: space-evenly;
+        background: #666;
+        position: fixed;
+        width: 100%;
+        margin: 0;
+    }
+
+    .gnb li {
+        margin: 10px 0;
+    }
+
+    .gnb li:hover {
+        font-size: 0;
+        background: skyblue;
+    }
+
 }
