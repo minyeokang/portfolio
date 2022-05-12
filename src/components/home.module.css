@@ -1,13 +1,3 @@
-.body::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: -1450px;
-    background: #fff;
-    transform: skew(45deg);
-}
-
 .flex {
     display: flex;
     justify-content: center;
@@ -43,6 +33,8 @@ img {
     padding-left: 70px;
     font-size: 4.0rem;
     position: relative;
+    color: #c7e987;
+
 }
 
 .intro dt::before {
@@ -51,14 +43,16 @@ img {
     left: 0;
     top: 50%;
     width: 50px;
-    height: 2px;
-    background: #fff;
+    height: 3px;
+    background: #c7e987;
 
 }
 
 .intro dd:nth-of-type(1) {
     padding-left: 70px;
     font-size: 4.0rem;
+    color: #c7e987;
+
 }
 
 .intro dd:nth-of-type(2) {

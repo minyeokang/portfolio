@@ -17,10 +17,10 @@ function Portfolio() {
                 <li onClick={() => {
                     setPops(true)
                 }}><img src="img/space_main.jpg" alt="스페이스" /></li>
-                <li><img src="img/space_main.jpg" alt="스페이스" /></li>
-                <li><img src="img/space_main.jpg" alt="스페이스" /></li>
-                <li><img src="img/space_main.jpg" alt="스페이스" /></li>
-                <li><img src="img/space_main.jpg" alt="스페이스" /></li>
+                <li><img src="img/globelist_main.jpg" alt="스페이스" /></li>
+                <li><img src="img/soul.main.jpg" alt="스페이스" /></li>
+                <li><img src="img/soulfull_main.jpg" alt="스페이스" /></li>
+                <li><img src="img/reminder-main.jpg" alt="스페이스" /></li>
                 <li><img src="img/space_main.jpg" alt="스페이스" /></li>
             </ul>
             {pops == true ?

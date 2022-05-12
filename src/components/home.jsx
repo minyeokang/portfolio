@@ -10,9 +10,9 @@ function Home() {
                 <dl className={styles.intro}>
                     <dt>I'M MINYEO KANG</dt>
                     <dd>WEB DEVELOPER</dd>
-                    <dd>I’m a kroean based web desginer  front-end developer focused on
-                        crafting<br /> clean user-friendly experiences. im passionate abot bulding
-                        excellent software<br /> that imports the lives of thoses around me.</dd>
+                    <dd>I’m a verstile Front-end developer based in Korea <br />
+                        Provide trendy Web Design and clean user-friendly experiences.<br />
+                        I believe in Reliable and Committed work ethic   </dd>
                 </dl>
 
             </div>
