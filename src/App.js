@@ -40,7 +40,7 @@ function App() {
           {
             menuArr.map((a, index) => {
               return (
-                <li
+                <li key={index}
                   className={clicked === index ? "btn_color" : ""}
                   onClick={() => {
                     selectMenuHandler(index);

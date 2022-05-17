@@ -1,79 +1,124 @@
-.menu {
-    display: flex;
-    justify-content: center;
-    max-width: calc(100% - 15.625%);
-    margin: 0 auto;
+.portfolio {
+    max-width: calc(100% - 100px);
+    margin: 100px auto;
 }
 
-.menu li {
-    padding: 0 40px;
-    margin-bottom: 50px;
-    cursor: pointer;
+.portfolio h2 {
+    color: #FFC8B0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.box {
-    width: 100%;
+.laptop {
+    padding-right: 10px;
+    font-size: 2.8rem;
+}
+
+
+.portfolio ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: calc(100% - 15.625%);
-    margin: 0 auto;
-}
-
-.box li {
-    width: calc((100% - 30px) / 3);
-    margin-bottom: 20px;
-}
-
-.box li img {
+    justify-content: center;
     width: 100%;
-    cursor: pointer;
 }
 
-.pop {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.pop_inner {
+.portfolio li {
     background: #fff;
-    width: 500px;
-    height: 500px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.portfolio li img {
+    width: 100%;
+}
+
+.portfolio li .dt {
+    position: relative;
+}
+
+.portfolio li .dd {
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.portfolio li .dd button {
+    border: 1px solid #3A8BB8;
+    background: transparent;
+    padding: 5px 10px;
+    color: #3A8BB8;
+}
+
+.portfolio li .dd span {
+    color: #000;
+    font-size: 1.8rem;
+}
+
+.portfolio li .dd .link {
+    color: #3A8BB8;
+    padding-right: 10px;
+}
+
+
+
+.shadow {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 50%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.shadow p {
+    border: 1px solid #fff;
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 5px 20px;
+    white-space: pre;
+    position: absolute;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 
-.pop button {
-    position: absolute;
-    top: 0;
-    right: 0;
+.portfolio .dt:hover .shadow {
+    opacity: 1;
 }
 
+@media(max-width: 1530px) {
+    .portfolio {
+        max-width: calc(100% - 300px);
+    }
+}
 
-
-
-
+@media(max-width: 1300px) {
+    .portfolio {
+        max-width: calc(100% - 200px);
+    }
+}
 
 @media(max-width: 1000px) {
+    .portfolio {
+        margin: 50px auto;
+    }
 
-    .box li {
-        width: calc((100% - 20px) / 2);
-
+    .portfolio li {
+        width: 100%;
     }
 }
 
-@media(max-width: 600px) {
-    .menu li {
-        padding: 0 20px;
+@media(max-width: 768px) {
+    .portfolio {
+        max-width: calc(100% - 50px);
     }
 
-    .box li {
-        width: 100%;
-    }
+
+
 }

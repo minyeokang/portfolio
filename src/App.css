@@ -41,7 +41,7 @@ textarea {
 }
 
 body {
-    background-color: #111;
+    background-color: #111822;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     font-size: 1.6rem;
@@ -49,8 +49,9 @@ body {
 }
 
 .gnb {
+    z-index: 999999;
     position: absolute;
-    right: 20px;
+    right: 50px;
     bottom: 50%;
     transform: translateY(50%);
 
@@ -62,7 +63,7 @@ body {
     padding: 13px 0;
     width: 50px;
     height: 50px;
-    background: #464646;
+    background: #2B2F35;
     border-radius: 50%;
     margin: 30px 0;
     cursor: pointer;
@@ -73,7 +74,7 @@ body {
 
 
 li.btn_color {
-    background: linear-gradient(0deg, rgba(91, 189, 154, 1) 0%, rgba(199, 233, 135, 1) 100%);
+    background: linear-gradient(0deg, rgba(254, 149, 130, 1) 0%, rgba(228, 202, 200, 1) 91%);
 }
 
 @media(max-width: 1000px) {
@@ -83,7 +84,7 @@ li.btn_color {
         transform: translateY(0);
         display: flex;
         justify-content: space-evenly;
-        background: #2B292A;
+        background: #151515;
         position: fixed;
         width: 100%;
         margin: 0;

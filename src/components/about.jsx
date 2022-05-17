@@ -3,87 +3,63 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function About() {
     return (
         <div className={styles.about}>
-            <h1>ABOUT ME</h1>
             <div className={styles.flex}>
-                <div className={styles.info}>
-                    <h2>PERSONAL INFO</h2>
-                    <p>Name<span>Minyeo Kang</span> </p>
-                    <p>Email<span>minyeo0729@gmail.com</span> </p>
-                    <p>Phone<span>+821030494123</span> </p>
-                    <p>Address<span>Busan, Korea</span> </p>
-                    <p>Language<span> Native korean, Fluent english</span></p>
-                </div>
-                <div className={styles.edu}>
-                    <h2>EDUCATION</h2>
-                    <div className={styles.eduIcon}>
-                        <p className={styles.eduIcons} >
-                            <FontAwesomeIcon icon="fa-solid fa-briefcase" />
+                <div className={styles.info_left}>
+                    <h1><img src="img/about.jpg" alt="profile" /></h1>
+                    <div>
+                        <h2>Minyeo Kang  <FontAwesomeIcon icon="fa-solid fa-caret-down" className={styles.h2icon} /></h2>
+                        <p>I'm frontend web developer focus on <br />providing trendy web design and <br />user friendly experience. I speak native <br />korean and very fluent english.
                         </p>
-                        <div className={styles.eduTxt}>
-                            <p className={styles.date}> 2021-2022</p>
-                            <p className={styles.college}>Responsive Web Design <span>- Busan IT training center</span></p>
+                    </div>
+                </div>
+                <div className={styles.info_right}>
+                    <div className={styles.edu}>
+                        <h2>Education</h2>
+
+                        <div className={styles.edu_flex}>
+                            <FontAwesomeIcon icon="fa-solid fa-book-open" className={styles.degree} />
+                            <div><p className={styles.major}> Responsive Web Design</p>
+                                <p className={styles.school}>  Busan IT training center in 2021-2022</p></div>
+
+                        </div>
+                        <div className={styles.edu_flex}>
+                            <FontAwesomeIcon icon="fa-solid fa-graduation-cap" className={styles.degree} />
+                            <div>
+                                <p className={styles.major}>  Hotel Management Tourism</p>
+                                <p className={styles.school}>KIT in 2013-2017</p>
+                            </div>
                         </div>
 
                     </div>
-                    <div className={styles.eduIcon}>
-                        <p className={styles.eduIcons} >
-                            <FontAwesomeIcon icon="fa-solid fa-briefcase" />
-                        </p>
-                        <div className={styles.eduTxt}>
-                            <p className={styles.date}> 2021-2022</p>
-                            <p className={styles.college}>Hotel Management Tourism <span>- KIT</span></p>
+                    <div className={styles.skill}>
+                        <h2>My Skills</h2>
+
+                        <div className={styles.box}>
+
+                            <p> <img src="img/icon/html.svg" alt="html" /></p>
+                            <p><img src="img/icon/css.svg" alt="css" /></p>
+                            <p><img src="img/icon/js.svg" alt="js" /></p>
+                            <p>                            <img src="img//icon/jquery.svg" alt="jquery" /></p>
+                            <br />
+                            <p> <img src="img/icon/react.svg" alt="react" /></p>
+                            <p> <img src="img/icon/redux.svg" alt="redux" /></p>
+                            <p><img src="img/icon/sasslogo.svg" alt="sass" /></p>
+                            <p><img src="img/icon/bootstrap.svg" alt="bootstrap" /></p>
+                            <br />
+                            <p><img src="img/icon/ai.svg" alt="ai" /></p>
+                            <p><img src="img/icon/ps.svg" alt="psd" /></p>
+                            <p><img src="img/icon/figma.svg" alt="figma" /></p>
+                            <p><img src="img/icon/git.svg" alt="git" /></p>
+
                         </div>
+
                     </div>
                 </div>
+
+
+
             </div>
 
-            <div className={styles.skill}>
-                <h2>MY SKILLS</h2>
-
-                <div className={styles.ico}>
-                    <div className={styles.box}>
-                        <p>frontend</p>
-                        <div>
-                            <img src="img/icon/html.svg" alt="html" />
-                            <img src="img/icon/css.svg" alt="css" />
-                            <img src="img/icon/js.svg" alt="js" />
-                        </div>
-
-                    </div>
-                    <div className={styles.box}>
-                        <p>framework</p>
-                        <div>
-                            <img src="img//icon/jquery.svg" alt="jquery" />
-                            <img src="img/icon/react.svg" alt="react" />
-                            <img src="img/icon/redux.svg" alt="redux" />
-                        </div>
-                    </div>
-                    <div className={styles.box}>
-                        <p>css processor</p>
-                        <div>
-                            <img src="img/icon/sasslogo.svg" alt="sass" />
-                            <img src="img/icon/postcss.svg" alt="postcss" />
-                            <img src="img/icon/bootstrap.svg" alt="bootstrap" />
-                        </div>
-                    </div>
-                    <div className={styles.box}>
-                        <p>design</p>
-                        <div>
-                            <img src="img/icon/ai.svg" alt="ai" />
-                            <img src="img/icon/ps.svg" alt="psd" />
-                            <img src="img/icon/figma.svg" alt="figma" />
-                        </div>
-                    </div>
-                    <div className={styles.box}>
-                        <p>version control</p>
-                        <div>
-                            <img src="img/icon/github.svg" alt="github" />
-                            <img src="img/icon/git.svg" alt="git" />
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
         </div>
     )
