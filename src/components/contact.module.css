@@ -1,80 +1,102 @@
-.contact {
-    max-width: calc(100% - 33.33%);
-    margin: 0 auto;
+@keyframes faderight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
 
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contact {
+    max-width: calc(100% - 100px);
+    margin: 0 auto;
 }
 
 .body {
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    padding: 0 300px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .touch {
-    width: 520px;
+    animation: 2s ease faderight;
+    ;
 }
 
-
 .touch h2 {
-    word-break: keep-all;
-    color: #8ADBBE;
+    color: #E5B6B3;
 }
 
 .touch p {
     font-size: 2.0rem;
 }
 
+.touch p.txt {
+    padding: 30px 0;
+}
+
 .touch_icon {
-    font-size: 2.0rem;
+    font-size: 3.0rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
-.touch p span.touch_icon_bg {
+.info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.info p {
+    line-height: 1;
+}
+
+.bg {
     border: 1px solid rgba(255, 255, 255, 0.8);
-    background: transparent;
-    width: 35px;
-    height: 35px;
-    display: inline-block;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     text-align: center;
-    padding: 3px 0;
+    padding: 7px 0;
+    margin-right: 30px;
 }
 
-.touch p span.touch_txt {
-    float: right;
-}
-
-.touch_arc {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.touch_arc:nth-of-type(2) {
-    margin-left: 20px;
+p.small {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.6rem;
 }
 
 .formBox {
-    margin-left: 100px;
+    padding-left: 150px;
+    width: 550px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
 }
 
 .form input {
-    background: #2B2F35;
+    border: 1px solid #ddd;
+    background: transparent;
     border-radius: 10px;
     height: 40px;
     width: 100%;
     padding-left: 15px;
     color: #fff;
+    margin: 5px 0;
 }
 
 .form textarea {
@@ -88,105 +110,83 @@ input::placeholder {
 
 input:focus {
     color: #fff;
+    border: 1px solid #E5B6B3;
 }
 
 textarea::placeholder {
     color: #fff;
 }
 
-textarea:focus {
-    color: #000;
+.form {
+    width: 100%;
 }
 
-.form .name,
-.form .email {
-    width: calc((100% - 20px) / 2);
-
-}
-
-.form .name {
-    margin-right: 20px;
-}
-
-.form .subject {
-    margin: 20px 0;
+.form .message:focus {
+    border: 1px solid #E5B6B3;
 }
 
 .form .message {
-    border: 0;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    height: 150px;
-    padding: 5px 10px;
-    background: #C1D9C4;
+    height: 170px;
+    padding: 10px;
+    background: transparent;
+    color: #fff;
 }
 
 .form .sendbtn {
-    margin-top: 20px;
     color: #fff;
     width: 100%;
-    padding: 5px;
-    background: #2B2F35;
-    border: 0;
-    border-radius: 10px;
     height: 40px;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    transition: all 0.5s;
 }
 
-
-
-@media(max-width: 1450px) {
-
-
-    .flex {
-        padding: 0 150px;
-    }
+.form .sendbtn:hover {
+    background: #E5B6B3;
 }
 
 @media(max-width: 1200px) {
-    .flex {
-        padding: 0 100px;
-    }
-
-    .touch h2 p br {
-        display: none;
+    .formBox {
+        padding-left: 50px;
+        width: 500px;
     }
 }
 
-
 @media(max-width: 1000px) {
-    .flex {
-        flex-direction: column;
-    }
-
-    .formBox {
-        margin-left: 0;
-        margin-top: 50px;
-    }
-
-    .body {
-        position: static;
-        left: 0;
-        top: 0;
-        transform: translate(0, 0);
-    }
-
-    .flex {
-        padding: 0;
-
-    }
-
     .contact {
+        max-width: calc(100% - 20px);
         margin: 100px auto;
     }
 
-    .touch {
-        width: 100%;
+    .info:last-of-type {
+        padding-bottom: 50px;
     }
-
 }
 
-@media(max-width: 500px) {
-    .contact {
-        max-width: calc(100% - 50px);
-        margin: 50px auto 100px;
+@media(max-width: 850px) {
+    .formBox {
+        width: 400px;
+    }
+}
+
+@media(max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: static;
+        top: 0;
+        transform: translateY(0);
+    }
+
+    .formBox {
+        padding-left: 0;
+        width: 100%;
     }
 }

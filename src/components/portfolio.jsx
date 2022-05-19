@@ -1,104 +1,116 @@
 
 import styles from './portfolio.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useEffect, useState } from 'react'
 function Portfolio() {
-
+    let [fade, setFade] = useState('')
+    useEffect(() => {
+        setFade('end')
+    }, [])
     return (
         <div className={styles.portfolio}>
-            <div className={styles.title}><h2> My projects</h2>
+            <div className={styles.body}>
+                <div className={styles.title}><h2> My projects</h2></div>
+
+                <ul className={'start ' + fade}>
+                    <li>
+                        <div className={styles.mb} onClick={() => { window.open('https://minyeokang.github.io/space') }}></div>
+                        <img src="img/space_main.jpg" alt="space" className={styles.mainImg} />
+                        <div className={styles.abs}>
+                            <div className={styles.list}>
+                                <span>
+                                    <img src='img/icon/react.svg' alt='react' /> Responsive Web
+                                </span>
+
+                                <div onClick={() => { window.open('https://minyeokang.github.io/space') }}>
+                                    <FontAwesomeIcon icon="fa-solid fa-globe" className={styles.link} />Website
+                                </div>
+
+                                <div onClick={() => {
+                                    window.open('https://minyeokang.github.io/space_styleguide')
+                                }}>
+                                    <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className={styles.link} />  Styleguide
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className={styles.mb} onClick={() => { window.open('https://minyeokang.github.io/globelist') }}></div>
+                        <img src="img/globelist_main.jpg" alt="globelist" className={styles.mainImg} />
+                        <div className={styles.abs}>
+                            <div className={styles.list}>
+                                <span>
+                                    <img src='img/icon/jquery.svg' alt='jquery' /> Static Web
+                                </span>
+
+                                <div onClick={() => { window.open('https://minyeokang.github.io/globelist') }}>
+                                    <FontAwesomeIcon icon="fa-solid fa-globe" className={styles.link} />Website
+                                </div>
+
+                                <div onClick={() => {
+                                    window.open('https://minyeokang.github.io/globelist_styleguide')
+                                }}>
+                                    <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className={styles.link} />  Styleguide
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className={styles.mb} onClick={() => { window.open('https://minyeokang.github.io/soul') }}></div>
+                        <img src="img/soul_main.jpg" alt="soul" className={styles.mainImg} />
+                        <div className={styles.abs}>
+                            <div className={styles.list}>
+                                <span>
+                                    <img src='img/icon/sasslogo.svg' alt='sass' /> Responsive Web
+                                </span>
+
+                                <div onClick={() => { window.open('https://minyeokang.github.io/soul') }}>
+                                    <FontAwesomeIcon icon="fa-solid fa-globe" className={styles.link} />Website
+                                </div>
+
+                                <div onClick={() => {
+                                    window.open('https://minyeokang.github.io/soul_styleguide')
+                                }}>
+                                    <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className={styles.link} />  Styleguide
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li onClick={() => { window.open('https://minyeokang.github.io/fullpage_soul') }}>
+                        <img src="img/soulfull_main.jpg" alt="soul" className={styles.mainImg} />
+                        <div className={styles.abs}>
+                            <div className={styles.list}>
+                                <p><img src='img/icon/fullpage.png' alt='fullpage' /> Fullscreen Web<br />
+                                    <span><FontAwesomeIcon icon="fa-solid fa-globe" className={styles.link} />Website</span> </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li onClick={() => { window.open('https://minyeokang.github.io/reminder') }}>
+                        <img src="img/reminder-main.jpg" alt="reminder" className={styles.mainImg} />
+                        <div className={styles.abs}>
+                            <div className={styles.list}>
+                                <p><img src='img/icon/react.svg' alt='react' /> PWA<br />
+                                    <span><FontAwesomeIcon icon="fa-solid fa-globe" className={styles.link} />Website</span> </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li onClick={() => { window.open('https://minyeokang.github.io/') }}>
+                        <img src="img/reminder-main.jpg" alt="" className={styles.mainImg} />
+                        <div className={styles.abs}>
+                            <div className={styles.list}>
+                                <p><img src='img/icon/cafe.JPG' alt='cafe' className={styles.link_cafe} />Shopping mall<br />
+                                    <span><FontAwesomeIcon icon="fa-solid fa-globe" className={styles.link} />Website</span> </p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+
+
 
             </div>
-
-            <ul>
-                <li>
-                    <div>
-                        <div className={styles.dt}>
-
-                            <div className={styles.shadow} onClick={() => {
-                                window.open('https://minyeokang.github.io/space_styleguide')
-                            }}><p><FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className={styles.link} />  Styleguide</p></div>
-                            <img src="img/space_main.jpg" alt="스페이스" />
-                        </div>
-                        <div className={styles.dd}>
-                            <span>
-                                Responsive Web with React
-                            </span>
-                            <button onClick={() => { window.open('https://minyeokang.github.io/space') }}><FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className={styles.link} />Visit  Website  </button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div className={styles.dt}>
-                            <div className={styles.shadow} onClick={() => {
-                                window.open('https://minyeokang.github.io/globelist_styleguide')
-                            }}><p><FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className={styles.link} />  Styleguide</p></div>
-                            <img src="img/globelist_main.jpg" alt="글로브리스트" />
-                        </div>
-                        <div className={styles.dd}>
-                            <span>Static Web with JQuery </span>
-                            <button onClick={() => { window.open('https://minyeokang.github.io/globelist') }}><FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className={styles.link} /> Visit Website  </button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div className={styles.dt}>
-                            <div className={styles.shadow} onClick={() => {
-                                window.open('https://minyeokang.github.io/soul_styleguide')
-                            }}><p><FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" className={styles.link} />  Styleguide</p></div>
-                            <img src="img/soul_main.jpg" alt="소울" />
-                        </div>
-                        <div className={styles.dd}>
-                            <span> Responsive Web with Sass</span>
-                            <button onClick={() => { window.open('https://minyeokang.github.io/soul') }}><FontAwesomeIcon icon="fa-solid fa-earth-americas" className={styles.link} /> Visit Website  </button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div className={styles.dt}>
-                            <img src="img/soulfull_main.jpg" alt="소울" />
-                        </div>
-                        <div className={styles.dd}>
-                            <span>Fullscreen Scrolling Website </span>
-                            <button onClick={() => { window.open('https://minyeokang.github.io/fullpage_soul') }}><FontAwesomeIcon icon="fa-solid fa-earth-americas" className={styles.link} />  Visit Website  </button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div className={styles.dt}>
-                            <img src="img/reminder-main.jpg" alt="리마인더" />
-                        </div>
-                        <div className={styles.dd}>
-                            <span>Progressive Web App with React</span>
-                            <button onClick={() => { window.open('https://minyeokang.github.io/reminder') }}><FontAwesomeIcon icon="fa-solid fa-earth-americas" className={styles.link} /> Visit Website  </button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div className={styles.dt}>
-                            <img src="img/soul_main.jpg" alt="쇼핑몰" />
-                        </div>
-                        <div className={styles.dd}>
-                            <span>Shopping mall with Cafe24</span>
-                            <button onClick={() => { window.open('https://minyeokang.github.io/soul') }}><FontAwesomeIcon icon="fa-solid fa-earth-americas" className={styles.link} /> Visit Website  </button>
-                        </div>
-                    </div>
-                </li>
-
-
-
-
-            </ul>
-
-
-
-
-
-
         </div>
     )
 

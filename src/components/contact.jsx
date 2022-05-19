@@ -2,6 +2,7 @@ import styles from './contact.module.css'
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import ContactKor from './contactKor';
 
 export const ContactUs = () => {
     const form = useRef();
@@ -25,43 +26,90 @@ export const ContactUs = () => {
             <textarea name="message" placeholder='MESSAGE' className={styles.message} />
             <button type="submit" className={styles.sendbtn} onClick={() => {
                 alert('Your message has been sent')
-            }}>Send Message</button>
+            }}> Send Message </button>
 
         </form>
     );
 };
 
-function Contact() {
+function Contact(props) {
+
     return (
         <div className={styles.contact}>
             <div className={styles.body}>
-                <div className={styles.flex}>
-                    <div className={styles.touch}>
-                        <h2>Let's keep in touch </h2>
-                        <br />
-                        <p>Feel free to send me a message<br />
-                            I'll reply back as soon as possible</p>
-                        <br />
 
-                        <p><span className={styles.touch_icon_bg} ><FontAwesomeIcon icon="fa-regular fa-envelope" className={styles.touch_icon} /></span><span className={styles.touch_txt}>minyeo0729@gmail.com</span></p>
+                {
+                    props.eng === true &&
 
-                        <p><span className={styles.touch_icon_bg}><FontAwesomeIcon icon="fa-solid fa-phone" className={styles.touch_icon} /></span><span className={styles.touch_txt}>+821030494123</span></p>
+                    <div className={styles.flex}>
+                        <div className={styles.touch}>
+                            <h2>Let's keep in touch </h2>
 
-                        <p><span className={styles.touch_icon_bg}><FontAwesomeIcon icon="fa-solid fa-location-dot" className={styles.touch_icon} /></span><span className={styles.touch_txt}>Busan, Korea</span></p>
+                            <p className={styles.txt}>Feel free to send me a message
+                                <br />
+                                I'll reply back as soon as possible
+                            </p>
 
+                            <div className={styles.info}>
+                                <div className={styles.bg}>
+                                    <FontAwesomeIcon icon="fa-regular fa-envelope" className={styles.touch_icon} />
+                                </div>
+                                <div>
+                                    <p className={styles.small}>EMAIL</p>
+                                    <p>minyeo0729@gmail.com</p>
+                                </div>
+                            </div>
 
-                        <p><span className={styles.touch_icon_bg}><FontAwesomeIcon icon="fa-solid fa-link" className={styles.touch_icon} /> </span><span className={styles.touch_txt} ><FontAwesomeIcon icon="fa-brands fa-github" className={styles.touch_arc} onClick={() => { window.open('https://github.com/minyeokang') }} /><FontAwesomeIcon icon="fa-solid fa-book-open" className={styles.touch_arc} onClick={() => { window.open('https://minyeo.tistory.com/') }} /></span></p>
+                            <div className={styles.info}>
+                                <div className={styles.bg}>
+                                    <FontAwesomeIcon icon="fa-solid fa-phone" className={styles.touch_icon} />
+                                </div>
+                                <div>
+                                    <p className={styles.small}>PHONE</p>
+                                    <p>+821030494123</p>
+                                </div>
+                            </div>
 
+                            <div className={styles.info}>
+                                <div className={styles.bg}>
+                                    <FontAwesomeIcon icon="fa-solid fa-location-dot" className={styles.touch_icon} />
+                                </div>
+                                <div>
+                                    <p className={styles.small}>ADDRESS</p>
+                                    <p>Busan, Korea</p>
+                                </div>
+                            </div>
 
+                            <div className={styles.info}>
+                                <div className={styles.bg}>
+                                    <FontAwesomeIcon icon="fa-solid fa-link" className={styles.touch_icon} />
+                                </div>
+                                <div>
+                                    <p className={styles.small}>VISIT</p>
 
+                                    <p>
+                                        <span onClick={() => { window.open('https://github.com/minyeokang') }}>Github <FontAwesomeIcon icon="fa-brands fa-github" className={styles.touch_arc} /></span>
+
+                                        <span onClick={() => { window.open('https://minyeo.tistory.com/') }}>Blog <FontAwesomeIcon icon="fa-solid fa-book-open" className={styles.touch_arc} /></span>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className={styles.formBox}>
+                            <ContactUs />
+                        </div>
                     </div>
 
-                    <div className={styles.formBox}>
-                        <ContactUs />
-                    </div>
-                </div>
+                }
+
+                {
+                    props.eng === false && <ContactKor />
+                }
             </div>
         </div>
+
     )
 
 }

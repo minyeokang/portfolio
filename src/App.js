@@ -1,18 +1,18 @@
 import './App.css';
-import { Routes, Route, useNavigate, Link } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Home from './components/home'
 import About from './components/about'
 import Portfolio from './components/portfolio'
 import Contact from './components/contact'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function App() {
 
   let navigate = useNavigate();
-  let [clicked, setClicked] = useState(0)
+  let [clicked, setClicked] = useState(0);
+  let [eng, setEng] = useState(true)
 
   const menuArr = [
     { name: '' },
@@ -29,11 +29,21 @@ function App() {
   const selectMenuHandler = (index) => {
     setClicked(index);
   }
+  const liname = ['Home', 'About', 'Project', 'Contact']
   const menu = [
     '/', '/about', '/portfolio', '/contact'
   ]
+
+  useEffect(() => {
+    navigate('/')
+  }, [])
   return (
     <div className="App">
+
+      <ul className='util'>
+        <li onClick={() => setEng(true)}>ENG</li>
+        <li onClick={() => setEng(false)}>KOR</li>
+      </ul>
       <nav>
         <ul className='gnb'>
 
@@ -48,6 +58,7 @@ function App() {
                   }}
                 >
                   {menuico[index]}
+                  <div className='action'>{liname[index]}</div>
                 </li>
 
               )
@@ -60,10 +71,10 @@ function App() {
 
 
       <Routes >
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home eng={eng} setEng={setEng} />} />
+        <Route path="/about" element={<About eng={eng} setEng={setEng} />} />
+        <Route path="/portfolio" element={<Portfolio eng={eng} setEng={setEng} />} />
+        <Route path="/contact" element={<Contact eng={eng} setEng={setEng} />} />
 
       </Routes>
 
