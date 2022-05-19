@@ -38,8 +38,8 @@ function ContactKor() {
             <div className={styles.touch}>
                 <h2>Let's keep in touch </h2>
 
-                <p className={styles.txt, 'kr'}>저에게 궁금하신 사항이 있으시면<br />
-                    여기서 간편하게 이메일을 보내주세요
+                <p className={styles.txt_kr}>저에게 궁금하신 사항이 있으시면<br />
+                    여기서 간편하게 이메일을 보내보세요.
                 </p>
 
                 <div className={styles.info}>

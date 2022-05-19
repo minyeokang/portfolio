@@ -14,7 +14,8 @@ function About(props) {
                             <div className={styles.profiletxt}>
                                 <div className={styles.bio}>
                                     <h2>Minyeo Kang</h2>
-                                    <p>I'm frontend web developer who genuinely love <br />creating Website using HTML ＆ CSS. I speak native <br />korean and very fluent english.
+                                    <p>I genuinely love making creative Website <br />
+                                        Focused on crafting clean ＆ user-friendly <br />experiences with trendy design
                                     </p>
                                 </div>
 
@@ -23,11 +24,11 @@ function About(props) {
                                     <div>
                                         <dl>
                                             <dt><FontAwesomeIcon icon="fa-solid fa-hand-holding-heart" /></dt>
-                                            <dd>Creact trendy user friendly website from the scratch and got fast work speed</dd>
+                                            <dd>Ability to establish Website from ground level to a flawless enterprise in a timely matter </dd>
                                         </dl>
                                         <dl>
                                             <dt><FontAwesomeIcon icon="fa-solid fa-people-roof" /></dt>
-                                            <dd>Excellent communication skills, bubbly personality and Strong work ethic </dd>
+                                            <dd>Excellent communication skills, Bubbly personality to improve workflow efficiencies</dd>
                                         </dl>
 
                                     </div>

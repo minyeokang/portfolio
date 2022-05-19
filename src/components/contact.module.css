@@ -33,6 +33,7 @@
 .touch {
     animation: 2s ease faderight;
     ;
+    padding-right: 100px;
 }
 
 .touch h2 {
@@ -47,9 +48,21 @@
     padding: 30px 0;
 }
 
+.touch p.txt_kr {
+    padding: 30px 0;
+    font-size: 1.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .touch_icon {
-    font-size: 3.0rem;
+    font-size: 2.2rem;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.touch_arc {
+    padding-right: 10px;
+    border-right: 3px solid rgba(255, 255, 255, 0.6);
+    margin-right: 10px;
 }
 
 .info {
@@ -61,12 +74,22 @@
 
 .info p {
     line-height: 1;
+    font-size: 1.6rem;
+}
+
+.info span {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.info span:hover {
+    color: #E5B6B3;
 }
 
 .bg {
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    width: 50px;
-    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     text-align: center;
     padding: 7px 0;
@@ -74,8 +97,8 @@
 }
 
 p.small {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.4rem;
 }
 
 .formBox {
@@ -92,7 +115,7 @@ p.small {
     border: 1px solid #ddd;
     background: transparent;
     border-radius: 10px;
-    height: 40px;
+    height: 45px;
     width: 100%;
     padding-left: 15px;
     color: #fff;
@@ -128,20 +151,20 @@ textarea::placeholder {
 .form .message {
     border: 1px solid #ddd;
     border-radius: 10px;
-    height: 170px;
-    padding: 10px;
+    height: 200px;
+    padding: 10px 13px;
     background: transparent;
     color: #fff;
+    margin: 5px 0;
 }
 
 .form .sendbtn {
     color: #fff;
     width: 100%;
-    height: 40px;
+    height: 45px;
     background: transparent;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 5px;
     margin-top: 10px;
     transition: all 0.5s;
 }
@@ -151,6 +174,10 @@ textarea::placeholder {
 }
 
 @media(max-width: 1200px) {
+    .touch {
+        padding-right: 0;
+    }
+
     .formBox {
         padding-left: 50px;
         width: 500px;

@@ -10,7 +10,8 @@ function AboutKor() {
                 <div className={styles.profiletxt}>
                     <div className={styles.bio}>
                         <h2>Minyeo Kang</h2>
-                        <p className='kr'>저는 창의적인 웹사이트 개발을 좋아하며 원어민급 <br />영어실력을 가지고있는 프론트엔드 개발자입니다.
+                        <p className='kr'>저는 창의적인 디자인과 편리함을 극대화하는 기능을 <br />가진 웹사이트를 만드는 것을 좋아하며 직접 기획하고 <br /> 개발할 수 있는 실력을 가지고 있습니다.
+
                         </p>
                     </div>
 
@@ -20,7 +21,7 @@ function AboutKor() {
                             <dl>
                                 <dt><FontAwesomeIcon icon="fa-solid fa-hand-holding-heart" /></dt>
                                 <dd className='kr'>
-                                    사용자 인터렉션을 첫번째로 생각하는 웹사이트를 기획하고 개발합니다.
+                                    주어진 시간 내에 완성도 높은 결과물을 만드는 효율성을 가지고 있습니다.
                                 </dd>
                             </dl>
                             <dl>

@@ -26,7 +26,7 @@ export const ContactUs = () => {
             <textarea name="message" placeholder='MESSAGE' className={styles.message} />
             <button type="submit" className={styles.sendbtn} onClick={() => {
                 alert('Your message has been sent')
-            }}> Send Message </button>
+            }}> SEND MESSAGE </button>
 
         </form>
     );
@@ -90,7 +90,7 @@ function Contact(props) {
                                     <p>
                                         <span onClick={() => { window.open('https://github.com/minyeokang') }}>Github <FontAwesomeIcon icon="fa-brands fa-github" className={styles.touch_arc} /></span>
 
-                                        <span onClick={() => { window.open('https://minyeo.tistory.com/') }}>Blog <FontAwesomeIcon icon="fa-solid fa-book-open" className={styles.touch_arc} /></span>
+                                        <span onClick={() => { window.open('https://minyeo.tistory.com/') }}>Blog <FontAwesomeIcon icon="fa-solid fa-book-open" /></span>
                                     </p>
                                 </div>
                             </div>
